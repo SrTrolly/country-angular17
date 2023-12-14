@@ -6,6 +6,8 @@ import { ByCountryPageComponent } from './pages/by-country-page/by-country-page.
 import { CountryRoutingModule } from './country-rounting.module';
 import { SharedModule } from '../shared/shared.module';
 import { CountryTableComponent } from './components/country-table/country-table.component';
+import { ContryPageComponent } from './pages/contry-page/contry-page.component';
+
 
 
 
@@ -15,12 +17,13 @@ import { CountryTableComponent } from './components/country-table/country-table.
     ByRegionPageComponent,
     ByCountryPageComponent,
     ByCountryPageComponent,
-    CountryTableComponent
+    CountryTableComponent,
+    ContryPageComponent
   ],
   imports: [
     CommonModule,
     CountryRoutingModule,
-    SharedModule
+    SharedModule,
   ]
 })
 export class CountryModule { }

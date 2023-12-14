@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CountryService } from '../../services/country.service';
 import { switchMap } from 'rxjs';
+import { Country } from '../../interfaces/country.interface';
 
 @Component({
   selector: 'app-contry-page',
@@ -10,6 +11,7 @@ import { switchMap } from 'rxjs';
 })
 export class ContryPageComponent implements OnInit {
 
+  public country?: Country;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -26,8 +28,7 @@ export class ContryPageComponent implements OnInit {
         if (!country) {
           return this.router.navigateByUrl("");
         }
-        console.log("tenemos un pais")
-        return;
+        return this.country = country;
       })
 
   }
